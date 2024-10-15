@@ -2883,6 +2883,26 @@ td:last-child {
     margin-bottom : var(--vspace-1_5);
 }
 
+.s-about__list li {
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.s-about__list li:hover {
+    transform: scale(1.1); /* Incrementa ligeramente el tamaño del elemento */
+}
+
+/* Ajustamos también los íconos (svg) dentro del <li> */
+.s-about__list li svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.s-about__list li:hover svg {
+    transform: scale(1.2); /* Los íconos se agrandan un poco más */
+}
+
+
+    
 /* ------------------------------------------------------------------- 
  * ## section header
  * ------------------------------------------------------------------- */
