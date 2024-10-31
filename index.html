@@ -19,7 +19,7 @@
         "name": "Sara Rodriguez Marketing Digital",
         "description": "Web personal de Sara Rodríguez, especialista en Marketing Digital, Growth Marketing y Coordinación de Marketing.",
         "jobTitle": "Especialista en marketing digital",
-        
+        "description": "Web personal de Sara Rodríguez, especialista en Marketing Digital, Growth Marketing y Coordinación de Marketing",
         "image": "https://sararodriguezdiaz.github.io/mk/perfil.jpg" 
         }
         
@@ -320,8 +320,20 @@
                     </div>
                 </div>
                 
+                <div class="column xl-12 column-special">
+                    <div class="row">
+                        <div class="card-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <div class="text-pretitle">2017-2018</div>    
+                        <h5 class="experience-item">Bachelor's of Technology - BTech Tourism Management</h5>
+                        <p class="card-subtitle mb-2 text-body-secondary">Saxion University of Applied Sciences</p>
+                        <div class="s-intro__content-pretitle text-pretitle">Nota: 8</div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="column xl-12"></div>
-                    <div class="" style="margin-top: 2rem ;">
+                    
                         <div class="card-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                         <div class="text-pretitle">2015-2019</div>    
                         <h5 class="experience-item">Grado en Turismo</h5>
@@ -329,7 +341,7 @@
                         <div class="s-intro__content-pretitle text-pretitle">Nota: 8.5</div>
                         
                         </div>
-                    </div>
+                    
                 </div>
         
         
@@ -647,6 +659,27 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        // Seleccionamos todos los elementos de la lista
+        const listItems = document.querySelectorAll('.s-about__list li');
+    
+        // Creamos el Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Agregamos la clase "in-view" cuando el elemento es visible
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, {
+            threshold: 0.2 // El elemento debe estar al menos un 20% visible
+        });
+    
+        // Asociamos el Observer a cada elemento de la lista
+        listItems.forEach(item => {
+            observer.observe(item);
+        });
     </script>
     </div>
     </body>
